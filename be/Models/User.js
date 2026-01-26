@@ -1,4 +1,3 @@
-const express = require("express")
 const mongoose = require("mongoose")
 
 const userSchema = new mongoose.Schema({
@@ -8,12 +7,13 @@ const userSchema = new mongoose.Schema({
     },
     email: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     password: {
-        tye: String,
+        type: String,
         required: true
     }
-})
+} , {timestamps: true})
 
-module.exports = mongoose.Schema("User", userSchema)
+module.exports = mongoose.model("User", userSchema)
