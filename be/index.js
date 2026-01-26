@@ -18,4 +18,4 @@ mongoose.connect(process.env.mongouri)
     console.log("Db Connected");
 })
 
-app.use("/api/users", router)
+app.use("/api", router)
