@@ -20,4 +20,4 @@ mongoose.connect(process.env.mongouri)
 })
 
 app.use("/api", router)
-app.unsubscribe("/  auth", AuthRouter)
+app.use("/auth", AuthRouter)
